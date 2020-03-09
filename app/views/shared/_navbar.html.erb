@@ -1,8 +1,19 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
-    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-    <% end %>
 
+    <div class="logo" style="color:white; background: rgb(2,0,36); background-image:linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 2%, rgba(0,0,0,0) 50%), url(<%= asset_path 'bulb.jpg' %>); border-radius:50%; height:50px; background-size:cover; background-position: center; padding:24px;">
+    </div>
+
+  <%= link_to "Home", pages_home_path, class:"btn btn-ghost" %>
+
+  <%= link_to "Products", categories_path, class:"btn btn-ghost" %>
+  <%= link_to "About", pages_about_path, class:"btn btn-ghost" %>
+  <%= link_to "Contact", pages_contact_path, class:"btn btn-ghost" %>
+  <%= link_to carts_path(@cart) do %>
+  <div style="justify-content: space-between;">
+  <i class="fas fa-shopping-cart" style="font-size: 20px;"></i>
+  <p>View Cart</p>
+  </div>
+  <% end %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
