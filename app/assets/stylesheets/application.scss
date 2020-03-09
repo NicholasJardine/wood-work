@@ -13,3 +13,148 @@
 @import "pages/index";
 
 
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.footer {
+  background: #470938;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  padding: 0px 50px;
+  color: rgba(0,0,0,0.3);
+  margin:0px;
+  position: sticky-bottom;
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  color: #f2d6eb;
+ /*  opacity: 0.5; */
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 16px;
+}
+
+.footer-links a:hover {
+  color: black;
+}
+
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+.navbar-lewagon {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  justify-content: space-between;
+  background: #470938;
+  height: 72px;
+}
+
+.nav-link-color{
+  color: #f2d6eb;
+}
+.navbar-lewagon a:hover {
+  color: black;
+}
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  height: 100%;
+  width: 140px;
+}
+
+.btn-ghost{
+  color: #f2d6eb;
+}
+
+
+
+
+
+.main-container{
+min-height: calc(100vh - 80px);
+background-color: black;
+}
+
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  height: 50vh;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.category-container{
+  margin: 0 48px;
+  padding: 40px;
+}
+
+
+.btn-gradient {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: linear-gradient(#167FFB, #0F60C4);
+  transition: background 0.3s ease;
+  border: 1px solid #0F60C4;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(#147EFF, #0F67DA);
+  color: white;
+}

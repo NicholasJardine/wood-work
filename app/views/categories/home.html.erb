@@ -1,2 +1,13 @@
-<h1>Categories#home</h1>
-<p>Find me in app/views/categories/home.html.erb</p>
+<div class="container d-flex justify-content-center" >
+
+    <div class="lobbies" id="lobby">
+      <% @categories.each do |category| %>
+      <%= render 'shared/catcard', category: category %>
+      <% end %>
+    </div>
+
+
+</div>
+    <div>
+  <%= link_to "Go Back", categories_path, class: "btn btn-gradient" %>
+    </div>
