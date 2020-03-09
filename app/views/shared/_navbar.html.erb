@@ -9,6 +9,12 @@
   <%= link_to "About", pages_about_path, class:"btn btn-ghost" %>
   <%= link_to "Contact", pages_contact_path, class:"btn btn-ghost" %>
   <%= link_to carts_path(@cart) do %>
+      <div>
+      <ul>
+        <li class="cart"> <%=  render'layouts/cart'%></li>
+
+      </ul>
+    </div>
   <div style="justify-content: space-between;">
   <i class="fas fa-shopping-cart" style="font-size: 20px;"></i>
   <p>View Cart</p>
