@@ -24,8 +24,8 @@
         <%= form_for(item, remote: true) do |f| %>
 
         <%= f.hidden_field :product_id , value: item.product.id %>
-        <h5><%= item.product.price %></h5>
-        <div class="form-group">
+<!--         <h5><%= item.product.price %></h5>
+ -->        <div class="form-group">
           <%= f.text_field :quantity, value: item.quantity.to_i, min: 1, class: 'form-control' %>
         </div>
         <div class="btn-group">
