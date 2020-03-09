@@ -1,9 +1,28 @@
 
-<div>
-    <%= render 'shared/product_show_card' %>
+<div style="justify-content: space-between;">
+  <%= render 'shared/product_show_card' %>
+  <div class="different">
+    <div style="justify-content: space-between;">
+      <h1>R<%=@product.price %></h1>
+      <h1><%= @product.title %></h1>
+    </div>
+    <h3><%= @product.description %></h3>
+    <div class="pull-right">
+      <%= form_for(@order_item) do |f| %>
+
+      <%= f.hidden_field :product_id , value: @product.id %>
+      <div class="form-group">
+        <%= f.text_field :quantity, value: 1, min: 1, class: 'form-control' %>
+      </div>
+      <div class="btn-group">
+        <%= f.submit "Add To Cart", class: "btn btn-primary" %>
+      </div>
+      <% end %>
+
+    </div>
+  </div>
 </div>
 
 <div>
-<%= link_to 'Go Back', :back, class: "btn btn-gradient" %>
+  <%= link_to 'Go Back', :back, class: "btn btn-gradient" %>
 </div>
-

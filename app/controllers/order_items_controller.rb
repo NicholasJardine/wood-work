@@ -1,4 +1,6 @@
 class OrderItemsController < ApplicationController
+  skip_before_action :authenticate_user!
+
 
   def create
     @order = current_order
