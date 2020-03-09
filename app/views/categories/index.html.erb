@@ -1,2 +1,34 @@
-<h1>Categories#index</h1>
-<p>Find me in app/views/categories/index.html.erb</p>
+<div class="category-container">
+  <div class="row" style="padding:45px;justify-content: center;">
+    <div class="col-8">
+      <%= link_to categories_home_path do %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_url'indoors.jpg'%>)">
+            For the Home
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="row" style="padding:45px;justify-content: center;">
+      <div class="col-8">
+        <%= link_to categories_garden_path do %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_url'garden.jpeg'%>">
+            Garden
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+
+  <div class="row" style="padding:45px; justify-content: center;">
+  <div class="col-8">
+    <%= link_to categories_art_path do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_url'art.jpg'%>)">
+          Art
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+

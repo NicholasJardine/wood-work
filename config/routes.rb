@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get 'categories/art'
   get 'categories/garden'
   devise_for :users
-  root to: 'home#index'
+  root to: 'pages#home'
   get 'categories/home'
   get 'categories/garden'
   get 'categories/art'

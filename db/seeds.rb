@@ -16,12 +16,12 @@ bathroom = Category.create!(title: 'Bathroom', pic: 'bathroom.jpg', main: 'home'
 lounge = Category.create!(title: 'Lounge', pic: 'lounge.jpg', main: 'home')
 
 puts "creating products"
-planter = Product.create!(title: 'planter',price: 500, category: garden_accessories)
-rocking_horse = Product.create!(title: 'Rockinghorse', price: 450, category: garden_accessories)
-mirror_one = Product.create!(title: 'bathroom mirror',price: 760, category: garden_accessories)
-shoe_rack = Product.create!(title: 'shoe rack',price: 350, category: garden_accessories)
-rocking_horse = Product.create!(title: 'Rockinghorse electric', price: 2500, category: garden_accessories)
-mirror_2 = Product.create!(title: 'bedroom mirror',price: 760, category: garden_accessories)
+planter = Product.create!(title: 'planter',price: 500, category: garden_accessories, description:"perfect goods we got here!", pic: "planter.jpeg")
+rocking_horse = Product.create!(title: 'Rockinghorse', price: 450, category: garden_accessories, description:"perfect goods we got here!", pic: "planter.jpeg")
+mirror_one = Product.create!(title: 'bathroom mirror',price: 760, category: garden_accessories, description:"perfect goods we got here!", pic: "planter.jpeg")
+shoe_rack = Product.create!(title: 'shoe rack',price: 350, category: garden_accessories, description:"perfect goods we got here!", pic: "planter.jpeg")
+rocking_horse = Product.create!(title: 'Rockinghorse electric', price: 2500, category: garden_accessories, description:"perfect goods we got here!", pic: "planter.jpeg")
+mirror_2 = Product.create!(title: 'bedroom mirror',price: 760, category: garden_accessories, description:"perfect goods we got here!", pic: "planter.jpeg")
 
 puts "#{Product.count} products created"
 puts "Let's go!"
