@@ -16,12 +16,18 @@ bathroom = Category.create!(title: 'Bathroom', pic: 'bathroom.jpg', main: 'home'
 lounge = Category.create!(title: 'Lounge', pic: 'lounge.jpg', main: 'home')
 
 puts "creating products"
-planter = Product.create!(title: 'planter',price: 500, category: garden_accessories, description:"perfect goods we got here!", pic: "planter.jpeg")
-rocking_horse = Product.create!(title: 'Rockinghorse', price: 450, category: garden_accessories, description:"perfect goods we got here!", pic: "planter.jpeg")
-mirror_one = Product.create!(title: 'bathroom mirror',price: 760, category: garden_accessories, description:"perfect goods we got here!", pic: "planter.jpeg")
-shoe_rack = Product.create!(title: 'shoe rack',price: 350, category: garden_accessories, description:"perfect goods we got here!", pic: "planter.jpeg")
-rocking_horse = Product.create!(title: 'Rockinghorse electric', price: 2500, category: garden_accessories, description:"perfect goods we got here!", pic: "planter.jpeg")
-mirror_2 = Product.create!(title: 'bedroom mirror',price: 760, category: garden_accessories, description:"perfect goods we got here!", pic: "planter.jpeg")
+planter = Product.create!(title: 'planter', pic: 'planter.jpeg',category: veges, description: "fantastic planter. I hate you if you dont like it", price: 500)
+labels = Product.create!(title: 'Vege-patch labels', pic: 'stakes1.jpg',category: veges, description: "wow. just wow.", price: 500)
+bedside = Product.create!(title: 'Bedside Table', pic: 'bedside.jpeg', category: bedroom, description: "wow. just wow.", price: 500)
+rocking_horse = Product.create!(title: 'Rockinghorse', pic: 'rockinghorse.jpeg',category: toys, description: "wow. just wow.", price: 500)
+mirror_one = Product.create!(title: 'bathroom mirror', pic: 'brmirror.jpeg', category: bathroom, description: "wow. just wow.", price: 500)
+patio_table = Product.create!(title: 'outdooor Table and bench set', pic: 'upbench.jpeg', category: garden_furniture, description: "wow. just wow.", price: 500)
+garden_swing_one = Product.create!(title: 'swinging garden bench', pic: 'gardenswing2.jpeg', category: garden_furniture, description: "wow. just wow.", price: 500)
+garden_swing = Product.create!(title: 'upcycled swinging bench', pic: 'gardenswing1.jpg', category: garden_furniture, description: "wow. just wow.", price: 500)
+birdhouse = Product.create!(title: 'Birdhouse', pic: 'birdhouse1.jpeg', category: garden_accessories, description: "wow. just wow.", price: 500)
+birdfeeder = Product.create!(title: 'Birdfeeder', pic: 'birdfeeder1.jpeg',category: garden_accessories, description: "wow. just wow.", price: 500)
+patio_couch = Product.create!(title: 'Veranda couch upcycled', pic: 'garden-furniture.jpeg',category: garden_furniture, description: "wow. just wow.", price: 600)
+train = Product.create!(title: 'Wooden Train', pic: 'train.jpeg',category: toys, description: "wow. just wow.", price: 600)
 
 puts "#{Product.count} products created"
 puts "Let's go!"
