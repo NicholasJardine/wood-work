@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+  get 'pages/home'
+  get 'pages/about'
+  get 'pages/contact'
+  get 'pages/sociial_outreach'
+  get 'products/index'
+  get 'products/show'
+  get 'categories/index'
+  get 'categories/show'
+  get 'categories/home'
+  get 'categories/art'
+  get 'categories/garden'
   devise_for :users
   root to: 'home#index'
   get 'categories/home'
