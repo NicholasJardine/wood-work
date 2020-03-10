@@ -2,8 +2,8 @@ class ProductsController < ApplicationController
     skip_before_action :authenticate_user!
 
   def index
-    @products = Product.where(category_id: @category.id)
     @category = Category.find(params[:id])
+    @products = Product.where(category_id: @category.id)
   end
 
   def show

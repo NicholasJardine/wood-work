@@ -39,10 +39,15 @@
   </div>
 </div>
 <% end %>
-<li> <%= link_to 'continue shopping', root_path  %></li>
-<% end %>
+
+
+
+  <div>
+  <%= link_to 'Continue Shopping', category_path(@category), class: "btn btn-gradient" %>
+  </div>
+
 <% if @order_items.size == 0 %>
 <p>no items in cart</p>
-<li> <%= link_to 'continue shopping', root_path  %></li>
+<li> <%= link_to 'continue shopping', categories_path  %></li>
 <% end %>
-
+<% end %>
