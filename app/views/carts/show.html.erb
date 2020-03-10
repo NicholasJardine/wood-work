@@ -24,8 +24,8 @@
         <%= form_for(item, remote: true) do |f| %>
 
         <%= f.hidden_field :product_id , value: item.product.id %>
-<!--         <h5><%= item.product.price %></h5>
- -->        <div class="form-group">
+        <h5><%= item.product.price %></h5>
+        <div class="form-group">
           <%= f.text_field :quantity, value: item.quantity.to_i, min: 1, class: 'form-control' %>
         </div>
         <div class="btn-group">
@@ -39,10 +39,22 @@
   </div>
 </div>
 <% end %>
-<li> <%= link_to 'continue shopping', root_path  %></li>
+
+<% if @category.main == 'art' %>
+  <div>
+  <%= link_to 'Continue Shopping', categories_art_path, class: "btn btn-gradient" %>
+  </div>
+<% elsif @category.main == 'home' %>
+  <div>
+  <%= link_to 'Continue Shopping', categories_home_path, class: "btn btn-gradient" %>
+  </div>
+<% else %>
+  <div>
+  <%= link_to 'Continue Shopping', categories_garden_path, class: "btn btn-gradient" %>
+  </div>
 <% end %>
 <% if @order_items.size == 0 %>
 <p>no items in cart</p>
-<li> <%= link_to 'continue shopping', root_path  %></li>
+<li> <%= link_to 'continue shopping', categories_path  %></li>
 <% end %>
-
+<% end %>
