@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'pages/about'
   get 'pages/contact'
   get 'pages/sociial_outreach'
+  get 'pages/eft_details'
   get 'products/index'
   get 'products/show'
   get 'categories/index'
@@ -22,6 +23,7 @@ Rails.application.routes.draw do
   get 'pages/social_outreach'
   get 'carts/show'
 
+  resources :customers
   resources :order_items
   resource :carts, only: [:show]
 

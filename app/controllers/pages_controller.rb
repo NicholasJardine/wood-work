@@ -12,4 +12,10 @@ class PagesController < ApplicationController
 
   def sociial_outreach
   end
+
+
+  def eft_details
+    @order = current_order
+    @customer = @order.customers.new
+  end
 end
