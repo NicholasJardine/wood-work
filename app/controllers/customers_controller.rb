@@ -6,7 +6,7 @@ class CustomersController < ApplicationController
     @order = current_order
     @customer = @order.customers.new(customer_params)
     @customer.save
-    session[:customer_id].to_i = @order.customer.id
+   session[:order_id] = @order.id
   end
 
 
