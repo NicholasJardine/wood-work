@@ -8,11 +8,21 @@ module ApplicationHelper
     end
   end
 
-  # def current_customer
-  #   if !session[:customer_id].to_i.nil?
-  #     Customer.find(session[:customer_id].to_i)
+  # def current_client
+  #   if !session[:client_id].nil?
+  #     Client.find(session[:customer_id])
   #   else
-  #     Customer.new
+  #     Client.new
   #   end
   # end
+
+    def current_buyer
+    if !session[:buyer_id].nil?
+      Buyer.find(session[:buyer_id])
+    else
+      Buyer.create
+    end
+  end
+
+
 end

@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
+  get 'clients/create'
+  get 'clients/update'
+  get 'buyers/show'
+  get 'buyers/create'
   get 'pages/home'
+  get 'pages/payments'
   get 'pages/about'
   get 'pages/contact'
   get 'pages/sociial_outreach'
@@ -26,6 +31,9 @@ Rails.application.routes.draw do
   resources :customers
   resources :order_items
   resource :carts, only: [:show]
+  resources :buyers, only: [:show, :new]
+  resources :clients, only: [ :create, :update]
+
 
   resources :categories, only: [:index, :show, :home, :art, :garden] do
     resources :products, only: [:index, :show]

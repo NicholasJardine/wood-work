@@ -2,6 +2,8 @@
 
       <div class="form-group">
       <%= form_for (@customer) do |f| %>
+
+
           <%= f.hidden_field :order_id , value: @order.id %>
 
 
