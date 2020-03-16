@@ -31,8 +31,8 @@ Rails.application.routes.draw do
   resources :customers
   resources :order_items
   resource :carts, only: [:show]
-  resources :buyers, only: [:show, :new]
-  resources :clients, only: [ :create, :update]
+  resources :buyers, only: [:update, :new, :create]
+  resources :clients, only: [ :create, :update, :new]
 
 
   resources :categories, only: [:index, :show, :home, :art, :garden] do
