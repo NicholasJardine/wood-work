@@ -4,10 +4,10 @@ class ClientsController < ApplicationController
   def create
     @order = current_order
     @order_items = @order.order_items
-    @buyer = current_buyer
+    @buyer = Buyer.new
+    @buyer.save
     @client = @order.clients.new(client_params)
     @client.save
-    @buyer.save
     session[:buyer_id] = @buyer.id
   end
 
@@ -18,11 +18,18 @@ class ClientsController < ApplicationController
     @order_items = @order.order_items
   end
 
+    def new
+      @order = current_order
+      @client = Client.new
+      @buyer = current_buyer
+
+    end
+
 
   private
 
   def client_params
-    params.require(:client).permit(:buyer_id, :name, :surname, :address, :postal_code)
+    params.require(:client).permit( :buyer_id, :name, :surname, :address, :postal_code)
   end
 
 end
