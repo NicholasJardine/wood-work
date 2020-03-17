@@ -21,7 +21,8 @@ class PagesController < ApplicationController
 
   def payments
     @order = current_order
-    @customer = @order.customers.where(order_id: @order.id)
+    @buyer = current_buyer
+    @client = @order.clients.first
   end
 
 end

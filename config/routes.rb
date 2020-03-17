@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   get 'clients/create'
   get 'clients/update'
   get 'buyers/show'
-  get 'buyers/create'
   get 'pages/home'
   get 'pages/payments'
   get 'pages/about'
