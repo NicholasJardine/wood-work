@@ -27,6 +27,8 @@ class BuyersController < ApplicationController
   def update
     @buyer = current_buyer
     @buyer.update_attributes(buyer_params)
+    @buyer.save
+    redirect_to pages_payments_path
   end
 
     private
