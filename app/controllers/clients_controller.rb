@@ -29,7 +29,7 @@ class ClientsController < ApplicationController
   private
 
   def client_params
-    params.require(:client).permit( :buyer_id, :name, :surname, :address, :postal_code)
+    params.require(:client).permit( :buyer_id, :name, :surname, :address, :postal_code, :city, :suburb, :province)
   end
 
 end

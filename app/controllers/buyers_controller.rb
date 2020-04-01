@@ -35,11 +35,11 @@ class BuyersController < ApplicationController
 
 
   def buyer_params
-    params.require(:buyer).permit(:name, :surname, :address, :postal_code)
+    params.require(:buyer).permit(:name, :surname, :address, :postal_code,:city, :suburb, :province)
   end
 
   def client_params
-    params.require(:client).permit(:name, :surname, :address, :postal_code)
+    params.require(:client).permit(:name, :surname, :address, :postal_code,:city, :suburb, :province)
   end
 
 

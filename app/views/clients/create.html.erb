@@ -1,52 +1,62 @@
-<h1>Are the following details for your order correct?</h1>
-<p>If so, cick continue. if not, please update them by clicking the "Change details" button below</p>
-<div>
-  <h2>Customer Details</h2>
-  <div>
-    <ul>
-      <li> Name:<%= @client.name %></li>
-      <li> surname:<%= @client.surname %></li>
-      <li> Shipping address:<%= @client.address %></li>
-      <li> Postal Code:<%= @client.postal_code %></li>
-    </ul>
-  </div>
-<h2> Items in cart </h2>
-  <div>
-    <% if @order_items.size > 0 %>
-    <% @order_items.each do |item| %>
-    <div class="well">
-      <div class="row">
-        <div class="col-sm-8">
+<div class="thing mt-5" style="text-align: center">
 
-          <div class="card-product">
-            <img src= "<%= asset_path item.product.pic %>" />
-            <div class="card-product-infos">
-            </div>
-            <h3><%= item.product.title %></h3>
-            <h3><%= item.product.price %></h3>
-          </div>
-        </div>
-      </div>
-    </div>
-    <% end %>
-  </div>
-<% end %>
+<h1>Are the following details for your order correct?</h1>
+<p><strong>If so, cick continue. if not, please update them by clicking the "Change details" button below</strong></p>
 
 </div>
+<br>
+<br>
 
-<h2>If not please click the button below to update</h2>
+<div style="border-top: solid 1px;border-bottom: solid 1px;">
+  <h2 style="text-decoration: underline;">CUSTOMER DETAILS</h2>
+  <br>
+  <div>
+    <ul style="font-size: 20px;">
+      <li> NAME:  <%= @client.name %></li>
+      <li> SURNAME:  <%= @client.surname %></li>
+      <li> SHIPPING ADDRESS:  <%= @client.address %></li>
+      <li> SUBURB:  <%= @client.suburb %></li>
+      <li> CITY:  <%= @client.city %></li>
+      <li> PROVINCE:  <%= @client.province %></li>
+      <li> POSTAL CODE:  <%= @client.postal_code %></li>
+    </ul>
+  </div>
+</div>
+
 <div>
+
+
+</div>
+<h2 style="text-decoration: underline;"> Items in your cart: </h2>
+<br>
+
+  <% if @order_items.size > 0 %>
+  <% @order_items.each do |item| %>
+  <div class="well">
+    <div class="row">
+      <div class="col-sm-8" style="display: flex; justify-content: space-between;">
+        <h6><%= item.product.title %></h6>
+        <h6>X<%= item.quantity %></h6>
+        <h6>R<%= item.product.price %></h6>
+
+      </div>
+    </div>
+  </div>
+<% end %>
+<% end %>
+<p>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+<br>
+<h3> Total: R<%= current_order.subtotal %> </h3>
 
       <div class="form-group">
       <%= form_for (@buyer) do |f| %>
-
           <%= f.hidden_field :name, value: @client.name %>
           <%= f.hidden_field :surname, value: @client.surname %>
-
           <%= f.hidden_field :address, value: @client.address %>
-
+          <%= f.hidden_field :address, value: @client.province %>
+          <%= f.hidden_field :address, value: @client.city %>
+          <%= f.hidden_field :address, value: @client.suburb %>
           <%= f.hidden_field :postal_code, value: @client.postal_code %>
-
       </div>
       <div class="btn-group">
         <%= f.submit "continue", class: "btn btn-success" %>
@@ -54,5 +64,4 @@
       <% end %>
 <%= link_to "Change Details", "#", class: "btn btn-danger" %>
 
-</div>
 
