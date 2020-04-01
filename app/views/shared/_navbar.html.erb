@@ -9,8 +9,8 @@
   <%= link_to "About", pages_about_path, class:"btn btn-ghost" %>
   <%= link_to "Contact", pages_contact_path, class:"btn btn-ghost" %>
   <%= link_to carts_path(@cart) do %>
-      <div>
-          <i class="fas fa-shopping-cart" style="font-size: 20px;"></i>
+      <div class="carting">
+          <i class="fas fa-shopping-cart" style="font-size: 20px; color: black;"></i>
 
 <%= "#{current_order.order_items.size} items in cart. Total: R#{current_order.subtotal}" %>
 

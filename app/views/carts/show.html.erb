@@ -7,6 +7,9 @@
 <% end %>
 
 <% if @order_items.size > 0 %>
+<h1>
+<%= "#{current_order.order_items.size} items in cart. Total: R#{current_order.subtotal}" %>
+</h1>
 <% @order_items.each do |item| %>
 <div class="well">
   <div class="row">

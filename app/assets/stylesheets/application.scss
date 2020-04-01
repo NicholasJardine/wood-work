@@ -19,8 +19,51 @@ html, body {
   overflow-x: hidden;
 }
 
+// .new-details{
+// display: flex;
+// justify-content: space-between;
+// align-items: center;
+// width:50%;
+// position: center;
+// }
+
+// .deets{
+// display: flex;
+// justify-content: space-around;
+// align-items: center;
+// width:50%;
+// position: center;
+// padding: 20px;
+// margin-top: 60px;
+// }
+
+.second h1{
+margin:auto;
+text-align: center;
+}
+
+.pp{
+  margin:auto;
+}
+.pay-page{
+
+
+  margin: auto;
+}
+
+.entry{
+
+display: flex;
+justify-content: space-between;
+align-items: center;
+width:50%;
+position: center;
+padding: 20px;
+margin: 40px;
+ }
+
 .footer {
-  background: #470938;
+  background: #235952;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -67,15 +110,15 @@ html, body {
   top: 0;
   z-index: 1;
   justify-content: space-between;
-  background: #470938;
+  background: #235952;
   height: 72px;
 }
 
 .nav-link-color{
-  color: #f2d6eb;
+  color: black;
 }
 .navbar-lewagon a:hover {
-  color: black;
+  color: white;
 }
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
@@ -87,7 +130,9 @@ html, body {
 }
 
 .btn-ghost{
-  color: #f2d6eb;
+  color: black;
+font-weight:medium;
+  font-size: 16px;
 }
 
 
@@ -96,7 +141,7 @@ html, body {
 
 .main-container{
 min-height: calc(100vh - 80px);
-background-color: black;
+background-color: #ffc8bd;
 }
 
 

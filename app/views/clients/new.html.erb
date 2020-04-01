@@ -1,23 +1,23 @@
+
 <h4> Almost done! Just a few more steps. Fill in the order form below</h4>
 
-      <div class="form-group">
-      <%= form_for (@client) do |f| %>
+<div>
 
-
+          <div class="col-6">
+      <%= simple_form_for(@client) do |f| %>
           <%= f.hidden_field :buyer_id , value: @buyer.id %>
           <%= f.hidden_field :order_id , value: @order.id %>
-
-
-
-          <%= f.text_field :name, placeholder: "First name"%>
-          <%= f.text_field :surname, placeholder: "Last name"%>
-
-          <%= f.text_field :address, placeholder: 'Shipping address'%>
-
-          <%= f.text_field :postal_code, placeholder: 'Postal Code' %>
-
-      </div>
-      <div class="btn-group">
+          <%= f.input :name, placeholder: "First name"%>
+          <%= f.input :surname, placeholder: "Last name"%>
+          <%= f.input :address, placeholder: 'Shipping address'%>
+          <%= f.input :postal_code, placeholder: 'Postal Code' %>
+          <%= f.input :province, collection:["Gauteng", "Western Cape","Eastern Cape", "Northern Cape",'Limpopo', 'Mpumalanga', 'Freestate', 'North West', 'Kwa-Zulu Natal' ], placeholder: 'Province'%>
+          <%= f.input :city, placeholder: 'city'%>
+          <%= f.input :suburb, placeholder: 'Suburb' %>
+          </div>
+      <div class="btn-group mt-4">
         <%= f.submit "submit details", class: "btn btn-primary" %>
       </div>
-      <% end %>
+          <% end %>
+
+</div>
